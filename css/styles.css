@@ -1,0 +1,127 @@
+/* Global styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #e6f0ff;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+header {
+  background-color: #004080;
+  padding: 1rem 2rem;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  color: #ffffff;
+}
+
+/* Navigation menu */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+
+.nav-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus {
+  background-color: #003366;
+  color: #ffcc00;
+}
+
+/* Main content area */
+.main-content {
+  max-width: 900px;
+  margin: 3rem auto 4rem auto;
+  padding: 1.5rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+/* Content sections */
+.content-section {
+  margin-bottom: 2rem;
+  padding: 1rem 1.5rem;
+  background-color: #f7faff;
+  border: 1px solid #cbd4e6;
+  border-radius: 6px;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #003366;
+  margin-top: 0;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+th, td {
+  border: 1px solid #aebcd8;
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+
+th {
+  background-color: #d4e1ff;
+  color: #003366;
+}
+
+/* Links */
+a {
+  color: #004080;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: #002050;
+  text-decoration: underline;
+}
+
+/* Footer styles */
+#main-footer {
+  background-color: #003366;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  font-size: 0.9rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+/* Footer text colors */
+#main-footer h1,
+#main-footer h2,
+#main-footer h3,
+#main-footer p,
+#main-footer a {
+  color: #ffffff;
+}
