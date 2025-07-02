@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTTP Knowledge Quiz</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .quiz-container {
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+    }
+    .question-block {
+      margin-bottom: 25px;
+    }
+    .result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>HTTP Knowledge Quiz</h1>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="topic1.html">HTTP History & Evolution</a></li>
+        <li><a href="topic2.html">How HTTP Works & Modern Usage</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <div class="quiz-container">
+      <form id="quizForm">
+        
+        <!-- Q1: Single correct MCQ -->
+        <div class="question-block">
+          <p>1. Which HTTP version introduced multiplexing?</p>
+          <label><input type="radio" name="q1" value="0"> HTTP/1.0</label><br />
+          <label><input type="radio" name="q1" value="1"> HTTP/1.1</label><br />
+          <label><input type="radio" name="q1" value="2"> HTTP/2</label><br />
+          <label><input type="radio" name="q1" value="3"> HTTP/3</label>
+        </div>
+
+        <!-- Q2: Single correct MCQ -->
+        <div class="question-block">
+          <p>2. What does HTTP stand for?</p>
+          <label><input type="radio" name="q2" value="0"> Hyper Terminal Text Platform</label><br />
+          <label><input type="radio" name="q2" value="1"> Hypertext Transfer Protocol</label><br />
+          <label><input type="radio" name="q2" value="2"> Hybrid Text Transfer Protocol</label><br />
+          <label><input type="radio" name="q2" value="3"> Hyperlink Text Terminal Protocol</label>
+        </div>
+
+        <!-- Q3: Fill-in-the-blank -->
+        <div class="question-block">
+          <p>3. Fill in the blank: The _______ method is used to retrieve data from a server.</p>
+          <input type="text" name="q3" />
+        </div>
+
+        <!-- Q4: Multiple correct options -->
+        <div class="question-block">
+          <p>4. Which of the following are valid HTTP request methods? (Select all that apply)</p>
+          <label><input type="checkbox" name="q4" value="GET"> GET</label><br />
+          <label><input type="checkbox" name="q4" value="FETCH"> FETCH</label><br />
+          <label><input type="checkbox" name="q4" value="POST"> POST</label><br />
+          <label><input type="checkbox" name="q4" value="UPDATE"> UPDATE</label><br />
+          <label><input type="checkbox" name="q4" value="DELETE"> DELETE</label>
+        </div>
+
+        <!-- Q5: Single correct MCQ -->
+        <div class="question-block">
+          <p>5. What protocol does HTTP/3 use for faster connections?</p>
+          <label><input type="radio" name="q5" value="0"> TCP</label><br />
+          <label><input type="radio" name="q5" value="1"> IPX</label><br />
+          <label><input type="radio" name="q5" value="2"> UDP (via QUIC)</label><br />
+          <label><input type="radio" name="q5" value="3"> FTP</label>
+        </div>
+
+        <button type="button" onclick="gradeQuiz()">Submit Quiz</button>
+        <button type="button" onclick="resetQuiz()">Restart</button>
+
+        <div class="result" id="result"></div>
+      </form>
+    </div>
+  </main>
+
+  <footer id="main-footer">
+    <p>Class project for <a href="https://ksuweb.github.io/IT3203/" target="_blank">IT 3203 Web Development</a></p>
+  </footer>
+
+  <script>
+    function gradeQuiz() {
+      let score = 0;
+      let resultHTML = "<h3>Results:</h3>";
+
+      // Q1: HTTP/2
+      if (document.querySelector('input[name="q1"]:checked')?.value == "2") {
+        score++;
+        resultHTML += "<p>1. Correct!</p>";
+      } else {
+        resultHTML += "<p>1. Incorrect. Correct answer: HTTP/2.</p>";
+      }
+
+      // Q2: Hypertext Transfer Protocol
+      if (document.querySelector('input[name="q2"]:checked')?.value == "1") {
+        score++;
+        resultHTML += "<p>2. Correct!</p>";
+      } else {
+        resultHTML += "<p>2. Incorrect. Correct answer: Hypertext Transfer Protocol.</p>";
+      }
+
+      // Q3: Fill in blank (GET)
+      const q3Answer = document.querySelector('input[name="q3"]').value.trim().toUpperCase();
+      if (q3Answer === "GET") {
+        score++;
+        resultHTML += "<p>3. Correct!</p>";
+      } else {
+        resultHTML += "<p>3. Incorrect. Correct answer: GET.</p>";
+      }
+
+      // Q4: Multiple correct (GET, POST, DELETE)
+      const q4Selected = Array.from(document.querySelectorAll('input[name="q4"]:checked')).map(cb => cb.value);
+      const correctQ4 = ["GET", "POST", "DELETE"];
+      const allCorrect = correctQ4.every(val => q4Selected.includes(val)) && q4Selected.every(val => correctQ4.includes(val));
+
+      if (allCorrect) {
+        score++;
+        resultHTML += "<p>4. Correct!</p>";
+      } else {
+        resultHTML += "<p>4. Incorrect. Correct answers: GET, POST, DELETE.</p>";
+      }
+
+      // Q5: UDP (via QUIC)
+      if (document.querySelector('input[name="q5"]:checked')?.value == "2") {
+        score++;
+        resultHTML += "<p>5. Correct!</p>";
+      } else {
+        resultHTML += "<p>5. Incorrect. Correct answer: UDP (via QUIC).</p>";
+      }
+
+      const pass = score >= 4 ? "✅ Pass" : "❌ Fail";
+      resultHTML += `<p><strong>Total Score: ${score}/5</strong></p>`;
+      resultHTML += `<p><strong>Result: ${pass}</strong></p>`;
+
+      document.getElementById("result").innerHTML = resultHTML;
+    }
+
+    function resetQuiz() {
+      document.getElementById("quizForm").reset();
+      document.getElementById("result").innerHTML = "";
+    }
+  </script>
+
+</body>
+</html>

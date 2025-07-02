@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+
   <header>
     <h1>HTTP History & Evolution</h1>
     <nav>
@@ -14,21 +15,31 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="topic1.html">HTTP History & Evolution</a></li>
         <li><a href="topic2.html">How HTTP Works & Modern Usage</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
         <li><a href="references.html">References</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="main-content">
+    <!-- Origins Section -->
     <section class="content-section">
       <h2>Origins of HTTP</h2>
       <p>
-        HTTP was introduced in 1989 by Tim Berners-Lee as part of the original design for the World Wide Web. The initial version, HTTP/0.9, was a minimal protocol allowing clients to request a single HTML document using only the GET method.
+        The Hypertext Transfer Protocol (HTTP) was proposed by Tim Berners-Lee in 1989 as part of the World Wide Web's original design at CERN. It was created to enable simple document transfer between networked computers. 
+      </p>
+      <p>
+        The first implementation, HTTP/0.9, was minimal—supporting only the <code>GET</code> method with no headers, status codes, or content types. This limited functionality laid the foundation for what would eventually become the most widely used application-layer protocol in the world.
       </p>
     </section>
 
+    <!-- Evolution Timeline Section -->
     <section class="content-section">
       <h2>HTTP Versions and Improvements</h2>
+      <p>
+        Over the past three decades, HTTP has undergone major revisions to support the growing complexity of the web. The table below summarizes the evolution of the protocol:
+      </p>
+
       <table>
         <thead>
           <tr>
@@ -39,37 +50,49 @@
         </thead>
         <tbody>
           <tr>
-            <td>HTTP/0.9</td>
+            <td><strong>HTTP/0.9</strong></td>
             <td>1989</td>
-            <td>Simple GET requests, no headers or status codes</td>
+            <td>Single-line GET requests, no headers, no status codes</td>
           </tr>
           <tr>
-            <td>HTTP/1.0</td>
+            <td><strong>HTTP/1.0</strong></td>
             <td>1996</td>
-            <td>Introduced headers, status codes, POST and HEAD methods</td>
+            <td>Introduced headers, status codes, content negotiation, POST and HEAD methods</td>
           </tr>
           <tr>
-            <td>HTTP/1.1</td>
+            <td><strong>HTTP/1.1</strong></td>
             <td>1997</td>
-            <td>Persistent connections, chunked transfer, caching</td>
+            <td>Persistent connections, chunked transfer encoding, caching support, host headers</td>
           </tr>
           <tr>
-            <td>HTTP/2</td>
+            <td><strong>HTTP/2</strong></td>
             <td>2015</td>
-            <td>Multiplexing, header compression, binary framing</td>
+            <td>Binary framing layer, multiplexing, header compression (HPACK), server push</td>
           </tr>
           <tr>
-            <td>HTTP/3</td>
+            <td><strong>HTTP/3</strong></td>
             <td>2022</td>
-            <td>Uses QUIC (UDP), faster and more reliable connections</td>
+            <td>Built on QUIC (UDP), faster handshakes, improved performance on unreliable networks</td>
           </tr>
         </tbody>
       </table>
+    </section>
+
+    <!-- Additional Context Section -->
+    <section class="content-section">
+      <h2>Adoption and Impact</h2>
+      <p>
+        HTTP’s evolution closely mirrors the growth of the web. By the early 2000s, HTTP/1.1 became the default across browsers and servers. HTTP/2 was adopted quickly by major platforms like Google and Cloudflare to reduce latency and improve load speeds.
+      </p>
+      <p>
+        HTTP/3, though newer, is rapidly gaining adoption across browsers such as Chrome, Firefox, and Edge, as well as major infrastructure providers like Cloudflare and Google. As web experiences continue to demand real-time interactivity, HTTP remains essential in shaping the future of communication.
+      </p>
     </section>
   </main>
 
   <footer id="main-footer">
     <p>Class project for <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener noreferrer">IT 3203 Web Development</a></p>
   </footer>
+
 </body>
 </html>
