@@ -271,15 +271,21 @@ a:focus {
   }
 }
 
-/* Responsive table wrapper */
-.responsive-table {
+/* Responsive Table Wrapper */
+.table-responsive {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
 
-/* Make sure the table doesn't break layout on small screens */
-.responsive-table table {
+.table-responsive table {
   width: 100%;
-  min-width: 600px; /* allows horizontal scrolling instead of squishing */
   border-collapse: collapse;
+  min-width: 600px; /* Makes sure the table scrolls on small screens */
+}
+
+/* Make table easier to read on small screens */
+.table-responsive th,
+.table-responsive td {
+  padding: 8px;
+  text-align: left;
 }
