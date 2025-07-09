@@ -271,21 +271,25 @@ a:focus {
   }
 }
 
-/* Responsive Table Wrapper */
 .table-responsive {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  background-color: white; 
+  padding-bottom: 10px;
 }
 
+/* Make sure the table and cells have background */
 .table-responsive table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 600px; /* Makes sure the table scrolls on small screens */
+  min-width: 600px;
+  background-color: white; 
 }
 
-/* Make table easier to read on small screens */
 .table-responsive th,
 .table-responsive td {
+  background-color: white; 
   padding: 8px;
   text-align: left;
+  border: 1px solid #ccc;
 }
