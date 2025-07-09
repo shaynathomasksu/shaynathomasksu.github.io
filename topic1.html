@@ -13,7 +13,7 @@
     <nav>
       <ul class="nav-menu">
         <li><a href="index.html">Home</a></li>
-        <li><a href="topic1.html">HTTP History & Evolution</a></li>
+        <li><a href="topic1.html" class="active">HTTP History & Evolution</a></li>
         <li><a href="topic2.html">How HTTP Works & Modern Usage</a></li>
         <li><a href="quiz.html">Quiz</a></li>
         <li><a href="references.html">References</a></li>
@@ -31,52 +31,63 @@
       <p>
         The first implementation, HTTP/0.9, was minimal—supporting only the <code>GET</code> method with no headers, status codes, or content types. This limited functionality laid the foundation for what would eventually become the most widely used application-layer protocol in the world.
       </p>
+      <p>
+        The simplicity of HTTP/0.9 reflected the early web’s focus on hypertext documents rather than complex applications. As the web grew, demands for more functionality led to rapid development and standardization through the IETF HTTP Working Group, producing HTTP/1.0 and later 1.1. These versions introduced important concepts like MIME types and connection persistence that allowed richer content and more efficient data transfer.
+      </p>
     </section>
 
     <!-- Evolution Timeline Section -->
     <section class="content-section">
-      <h2>HTTP Versions and Improvements</h2>
-      <p>
-        Over the past three decades, HTTP has undergone major revisions to support the growing complexity of the web. The table below summarizes the evolution of the protocol:
-      </p>
+  <h2>HTTP Versions and Improvements</h2>
+  <p>
+    Over the past three decades, HTTP has undergone major revisions to support the growing complexity of the web. The table below summarizes the evolution of the protocol:
+  </p>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Version</th>
-            <th>Year Released</th>
-            <th>Key Features</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>HTTP/0.9</strong></td>
-            <td>1989</td>
-            <td>Single-line GET requests, no headers, no status codes</td>
-          </tr>
-          <tr>
-            <td><strong>HTTP/1.0</strong></td>
-            <td>1996</td>
-            <td>Introduced headers, status codes, content negotiation, POST and HEAD methods</td>
-          </tr>
-          <tr>
-            <td><strong>HTTP/1.1</strong></td>
-            <td>1997</td>
-            <td>Persistent connections, chunked transfer encoding, caching support, host headers</td>
-          </tr>
-          <tr>
-            <td><strong>HTTP/2</strong></td>
-            <td>2015</td>
-            <td>Binary framing layer, multiplexing, header compression (HPACK), server push</td>
-          </tr>
-          <tr>
-            <td><strong>HTTP/3</strong></td>
-            <td>2022</td>
-            <td>Built on QUIC (UDP), faster handshakes, improved performance on unreliable networks</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+  <table>
+    <thead>
+      <tr>
+        <th>Version</th>
+        <th>Year Released</th>
+        <th>Key Features</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Version"><strong>HTTP/0.9</strong></td>
+        <td data-label="Year Released">1989</td>
+        <td data-label="Key Features">Single-line GET requests, no headers, no status codes</td>
+      </tr>
+      <tr>
+        <td data-label="Version"><strong>HTTP/1.0</strong></td>
+        <td data-label="Year Released">1996</td>
+        <td data-label="Key Features">Introduced headers, status codes, content negotiation, POST and HEAD methods</td>
+      </tr>
+      <tr>
+        <td data-label="Version"><strong>HTTP/1.1</strong></td>
+        <td data-label="Year Released">1997</td>
+        <td data-label="Key Features">
+          Persistent connections, chunked transfer encoding, caching support, host headers. This version’s support for persistent connections and chunked transfer encoding significantly reduced latency by allowing multiple requests/responses over a single connection, improving user experience.
+        </td>
+      </tr>
+      <tr>
+        <td data-label="Version"><strong>HTTP/2</strong></td>
+        <td data-label="Year Released">2015</td>
+        <td data-label="Key Features">
+          Binary framing layer, multiplexing, header compression (HPACK), server push. By introducing multiplexing, HTTP/2 solves the head-of-line blocking issue seen in HTTP/1.x, enabling multiple simultaneous streams over one connection, dramatically speeding up page loads.
+        </td>
+      </tr>
+      <tr>
+        <td data-label="Version"><strong>HTTP/3</strong></td>
+        <td data-label="Year Released">2022</td>
+        <td data-label="Key Features">Built on QUIC (UDP), faster handshakes, improved performance on unreliable networks</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Image -->
+<img src="images/http-evolution-diagram.png" alt="Diagram of HTTP Evolution" style="max-width:100%; height:auto; margin-top:1rem;" />
+</section>
+
 
     <!-- Additional Context Section -->
     <section class="content-section">
@@ -86,6 +97,9 @@
       </p>
       <p>
         HTTP/3, though newer, is rapidly gaining adoption across browsers such as Chrome, Firefox, and Edge, as well as major infrastructure providers like Cloudflare and Google. As web experiences continue to demand real-time interactivity, HTTP remains essential in shaping the future of communication.
+      </p>
+      <p>
+        The transition to newer HTTP versions is often slow due to the need for widespread support in clients, servers, and intermediaries. Yet, the web’s continuous evolution, including mobile and IoT devices, ensures HTTP’s relevance. The shift towards HTTP/3 with QUIC reflects a trend to optimize for modern network conditions, especially on wireless and lossy networks.
       </p>
     </section>
   </main>

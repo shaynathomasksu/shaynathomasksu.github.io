@@ -14,10 +14,9 @@
     <h1>How HTTP Works & Modern Usage</h1>
     <nav>
       <ul class="nav-menu">
-        <!-- Navigation links to other pages -->
         <li><a href="index.html">Home</a></li>
         <li><a href="topic1.html">HTTP History & Evolution</a></li>
-        <li><a href="topic2.html">How HTTP Works & Modern Usage</a></li>
+        <li><a href="topic2.html" class="active">How HTTP Works & Modern Usage</a></li>
         <li><a href="quiz.html">Quiz</a></li>
         <li><a href="references.html">References</a></li>
       </ul>
@@ -33,6 +32,8 @@
       <p>
         HTTP operates as a stateless, request-response protocol. The client—usually a web browser—sends a request to a server using a URL, and the server returns a response. While older versions use TCP, HTTP/3 runs over the QUIC protocol, which uses UDP for faster and more reliable communication.
       </p>
+            <!-- Image -->
+<img src="images/http-request-response.png" style="max-width:100%; height:auto; margin-top:1rem;" />
       <p>
         An HTTP request includes a request line (method, URI, and HTTP version), headers, and an optional body. Common methods include:
       </p>
@@ -52,6 +53,13 @@
         <li>4xx – Client Error</li>
         <li>5xx – Server Error</li>
       </ul>
+      <p>
+        Status codes not only inform clients of the success or failure of requests but also guide automated behaviors. For example, </code>301 Moved Permanently</code> tells browsers and search engines to update URLs, while <code>429 Too Many Requests</code> helps servers manage traffic load through rate limiting.
+      </p>
+
+
+      <!-- Image -->
+<img src="images/http-methods-cheatsheet.png" style="max-width:100%; height:auto; margin-top:1rem;" />
     </section>
 
     <!-- Section: Modern Web Usage -->
@@ -66,6 +74,9 @@
       <p>
         Secure HTTP (HTTPS) uses Transport Layer Security (TLS) to encrypt data and ensure privacy and authenticity. HTTPS is now standard for any site handling sensitive data.
       </p>
+      <p>
+        The rise of Single Page Applications (SPAs) and asynchronous JavaScript calls (AJAX/fetch API) has changed how HTTP is used — with many small API calls replacing traditional full-page reloads. This paradigm demands efficient HTTP usage and faster protocols to reduce overhead.
+      </p>
     </section>
 
     <!-- Section: Tools and Implementations -->
@@ -73,6 +84,9 @@
       <h2>Tools and Implementations</h2>
       <p>
         Developers use tools like <strong>Postman</strong> to test HTTP requests, while browser developer tools (F12) help monitor live HTTP activity. CLI tools such as <code>curl</code> and <code>wget</code> are widely used for scripting HTTP requests.
+      </p>
+      <p>
+        For instance, Postman enables developers to build, test, and document RESTful APIs easily, while <code>curl</code> is invaluable for scripting and troubleshooting network requests. Modern browsers provide detailed HTTP inspectors showing request headers, responses, timing, and cookies, empowering developers to optimize performance and security.
       </p>
       <p>
         Web servers like Apache, Nginx, and Microsoft IIS serve content using HTTP. On the client side, browsers like Chrome, Firefox, Edge, and Safari support HTTP/1.1, HTTP/2, and increasingly HTTP/3.
@@ -84,6 +98,9 @@
       <h2>Challenges and Future Directions</h2>
       <p>
         Although HTTP/2 and HTTP/3 offer performance improvements, challenges such as network congestion and real-time communication needs remain. HTTP/3 adoption is still growing, and compatibility with legacy systems can be inconsistent.
+      </p>
+      <p>
+        HTTP/3's reliance on UDP brings benefits but also new challenges, such as firewall traversal and ensuring reliability over an inherently connectionless protocol. Meanwhile, emerging protocols like WebTransport and WebSockets complement HTTP for scenarios needing bidirectional, low-latency communication such as gaming and live streaming.
       </p>
       <p>
         Looking ahead, HTTP will continue to evolve alongside technologies like IoT, real-time communication, and AI-based systems. Emerging protocols such as WebTransport aim to complement HTTP in scenarios requiring ultra-low latency.
