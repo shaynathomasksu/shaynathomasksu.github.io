@@ -270,3 +270,16 @@ a:focus {
     font-size: 1rem;
   }
 }
+
+/* Responsive table wrapper */
+.responsive-table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Make sure the table doesn't break layout on small screens */
+.responsive-table table {
+  width: 100%;
+  min-width: 600px; /* allows horizontal scrolling instead of squishing */
+  border-collapse: collapse;
+}

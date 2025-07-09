@@ -37,52 +37,54 @@
     </section>
 
     <!-- Evolution Timeline Section -->
-    <section class="content-section">
+   <section class="content-section">
   <h2>HTTP Versions and Improvements</h2>
   <p>
     Over the past three decades, HTTP has undergone major revisions to support the growing complexity of the web. The table below summarizes the evolution of the protocol:
   </p>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Version</th>
-        <th>Year Released</th>
-        <th>Key Features</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="Version"><strong>HTTP/0.9</strong></td>
-        <td data-label="Year Released">1989</td>
-        <td data-label="Key Features">Single-line GET requests, no headers, no status codes</td>
-      </tr>
-      <tr>
-        <td data-label="Version"><strong>HTTP/1.0</strong></td>
-        <td data-label="Year Released">1996</td>
-        <td data-label="Key Features">Introduced headers, status codes, content negotiation, POST and HEAD methods</td>
-      </tr>
-      <tr>
-        <td data-label="Version"><strong>HTTP/1.1</strong></td>
-        <td data-label="Year Released">1997</td>
-        <td data-label="Key Features">
-          Persistent connections, chunked transfer encoding, caching support, host headers. This version’s support for persistent connections and chunked transfer encoding significantly reduced latency by allowing multiple requests/responses over a single connection, improving user experience.
-        </td>
-      </tr>
-      <tr>
-        <td data-label="Version"><strong>HTTP/2</strong></td>
-        <td data-label="Year Released">2015</td>
-        <td data-label="Key Features">
-          Binary framing layer, multiplexing, header compression (HPACK), server push. By introducing multiplexing, HTTP/2 solves the head-of-line blocking issue seen in HTTP/1.x, enabling multiple simultaneous streams over one connection, dramatically speeding up page loads.
-        </td>
-      </tr>
-      <tr>
-        <td data-label="Version"><strong>HTTP/3</strong></td>
-        <td data-label="Year Released">2022</td>
-        <td data-label="Key Features">Built on QUIC (UDP), faster handshakes, improved performance on unreliable networks</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="responsive-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Version</th>
+          <th>Year Released</th>
+          <th>Key Features</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Version"><strong>HTTP/0.9</strong></td>
+          <td data-label="Year Released">1989</td>
+          <td data-label="Key Features">Single-line GET requests, no headers, no status codes</td>
+        </tr>
+        <tr>
+          <td data-label="Version"><strong>HTTP/1.0</strong></td>
+          <td data-label="Year Released">1996</td>
+          <td data-label="Key Features">Introduced headers, status codes, content negotiation, POST and HEAD methods</td>
+        </tr>
+        <tr>
+          <td data-label="Version"><strong>HTTP/1.1</strong></td>
+          <td data-label="Year Released">1997</td>
+          <td data-label="Key Features">
+            Persistent connections, chunked transfer encoding, caching support, host headers. This version’s support for persistent connections and chunked transfer encoding significantly reduced latency by allowing multiple requests/responses over a single connection, improving user experience.
+          </td>
+        </tr>
+        <tr>
+          <td data-label="Version"><strong>HTTP/2</strong></td>
+          <td data-label="Year Released">2015</td>
+          <td data-label="Key Features">
+            Binary framing layer, multiplexing, header compression (HPACK), server push. By introducing multiplexing, HTTP/2 solves the head-of-line blocking issue seen in HTTP/1.x, enabling multiple simultaneous streams over one connection, dramatically speeding up page loads.
+          </td>
+        </tr>
+        <tr>
+          <td data-label="Version"><strong>HTTP/3</strong></td>
+          <td data-label="Year Released">2022</td>
+          <td data-label="Key Features">Built on QUIC (UDP), faster handshakes, improved performance on unreliable networks</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
   <!-- Image -->
 <img src="images/http-evolution-diagram.png" alt="Diagram of HTTP Evolution" style="max-width:100%; height:auto; margin-top:1rem;" />
